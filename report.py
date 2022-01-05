@@ -1,0 +1,1 @@
+# Script for sending log message through a Telegram Bot 
