@@ -17,5 +17,5 @@ def handle(msg):
         bot.sendMessage('')
 
 
-bot = telepot.Bot('5026547082:AAGgzOX1CrIfqCkrLbJdIHZqvcLY2m31n6k')
+bot = telepot.Bot('token')
 bot.loop(handle)
