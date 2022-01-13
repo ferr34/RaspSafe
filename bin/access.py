@@ -13,6 +13,7 @@ def access_safe_menu(password):
         print('Password already read...')
 
         # Jumping to the menu 
+
     else:
         try_counter = 0
         while try_counter < 2:
@@ -27,6 +28,7 @@ def access_safe_menu(password):
                 print('User authenticated. Welcome back.')
                 
                 # Opening the menu 
+                mn.show_menu()
 
             else:
                 # Sending telegram message
