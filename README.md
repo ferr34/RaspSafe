@@ -1,1 +1,1 @@
-This project is a personal data bank for everyone. With a simple 2FA (using Telegram and a password) you will store safely every type of data you want. 
+This project is a personal data bank for everyone. With the use of hashes and encryption you will store safely every type of file. The software will also let you know if someone tried to access your safe while you're away. 
