@@ -1,5 +1,5 @@
 from Crypto.Hash import SHA256
-import access as acc
+from bin import access as acc
 import remote_control_bot as rcb 
 import os 
 
@@ -41,9 +41,6 @@ def first_time():
     update_aes_param.write(str(hash_two.digest()))
     update_aes_param.close()
     
-
-    # Link with the Telegram Bot -> Remote control for ciphering
-    rcb.call_bot()
 
     print('Opening the safe...')
     

@@ -17,9 +17,12 @@ def show_menu():
 
 
 # Input type check 
-while not choice.isdigit() and (choice >= 1 and choice <= 5):
-    print("Insert a number between 1 and 5.")
-    show_menu()
+while True: 
+    if not str(choice).isdigit():
+        # Error - need to reinsert 
+        show_menu()
+    else: 
+        break
 
 
 # Input correct, going to script for every function

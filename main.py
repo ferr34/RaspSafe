@@ -2,9 +2,9 @@
 
 # Author @ferr_34
 import signal
-import encrypt as enc
-import first_time as ft
-import access as acc
+from bin import encrypt as enc
+from bin import first_time as ft
+from bin import access as acc
 import time
 import os
 import sys

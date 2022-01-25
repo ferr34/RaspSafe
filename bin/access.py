@@ -3,7 +3,7 @@ import os
 import sys
 import datetime 
 import time
-from menus import menu as mn
+from bin.menus import menu as mn 
 from bot import remote_control_bot as rmc
 import encrypt as enc
 
