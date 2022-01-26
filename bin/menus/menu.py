@@ -2,6 +2,7 @@
 
 import os 
 import datetime
+import show_files as sf # External file for showing the file
 
 choice = 0
 
@@ -10,7 +11,7 @@ def show_menu():
     print("1. List all the files in the safe")
     print("2. Add a file in the safe")
     print("3. Delete permantently a file from the safe")
-    print("4. Unsafe a file from the safe")
+    print("4. Unsafe a file")
     print("5. Exit from the safe")
     
     choice = input("Please choose an option: ")
@@ -26,18 +27,21 @@ while True:
 
 
 # Input correct, going to script for every function
-match choice:
-    case 1:
-        print("Calling the method...")
-    case 2:
-        print("Calling the method...")
-    case 3: 
-        print("Calling the method...")
-    case 4:
-        print("Calling the method...")
-    case 5:
-        print("Calling the method...") 
-    
+if choice == 1:
+    sf.show()
+
+if choice == 2:
+    add_file()
+
+if choice == 3: 
+    delete_file()
+
+if choice == 4: 
+    unsafe_file()
+
+if choice == 5: 
+    print("See you soon. Leaving the safe...")
+    exit()
 
 
 
