@@ -15,7 +15,7 @@ def first_time():
     aes_parameters[1] = input("Insert AES initialization vector: ")
     
     # Creating hidden folder
-    folder_name = "data_to_protect_" + username
+    folder_name = ".data_to_protect_" + username
     print(folder_name) # test
     
     os.mkdir(folder_name)

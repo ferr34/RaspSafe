@@ -1,6 +1,8 @@
 
 # Script for showing files like the tree function in Linux
 
+# Code by abstrus@StackOverflow 
+
 from os import path
 from pathlib import Path 
 
@@ -45,7 +47,7 @@ class DisplayablePath(object):
             if path.is_dir():
                 yield from cls.make_tree(path, 
                                          parent=displayable_root,
-                                         is_last = is_last   
+                                         is_last = is_last,   
                                           criteria = criteria)
             else:
                 yield cls(path, displayable_root, is_last)
@@ -70,3 +72,20 @@ class DisplayablePath(object):
                             else self.display_filename_prefix_middle)
         
         parts = ['{!s} {!s}'.format(_filename_prefix, self.displayname)]
+
+        parent = self.parent
+        while parent and parent.parent is not None:
+            parts.append(self.display_parent_prefix_middle
+                            if parent.is_last
+                            else self.display_filename_prefix_last)
+            parent = parent.parent 
+
+        return ''.join(reversed(parts))
+
+
+def show_tree(user):
+    my_path = ".data_to_protect_" + user
+    paths = DisplayablePath.make_tree(Path(str(my_path)))
+
+    for path in paths:
+        print(path.displayable())

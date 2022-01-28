@@ -8,6 +8,7 @@ from bin import access as acc
 import time
 import os
 import sys
+from bin import report as rp
 
 # Step 0 - Accessing the Safe
 print('__________                        _________       _____       ')
@@ -45,7 +46,8 @@ def setup():
 while True:
     print('1) Access the safe')
     print('2) Set up your safe')
-    print('3) Exit from the program.')
+    print('3) See the logs')
+    print('4) Exit from the program.')
     
     choice = input('Digit an option:')
     
@@ -56,5 +58,8 @@ while True:
         setup()
     
     if choice == 3:
+        rp.show_logs()
+    
+    if choice == 4:
         # Exit from the safe
         sys.exit('Leaving the safe... Bye!')

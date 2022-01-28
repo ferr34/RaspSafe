@@ -8,11 +8,11 @@ choice = 0
 
 def show_menu():
     print("Options available: ")
-    print("1. List all the files in the safe")
-    print("2. Add a file in the safe")
-    print("3. Delete permantently a file from the safe")
-    print("4. Unsafe a file")
-    print("5. Exit from the safe")
+    print("1) List all the files in the safe")
+    print("2) Add a file in the safe")
+    print("3) Delete permantently a file from the safe")
+    print("4) Unsafe a file")
+    print("5) Exit from the safe")
     
     choice = input("Please choose an option: ")
 
@@ -28,7 +28,8 @@ while True:
 
 # Input correct, going to script for every function
 if choice == 1:
-    sf.show()
+    user = input("Please insert username for search:")
+    sf.show_tree(user)
 
 if choice == 2:
     add_file()
